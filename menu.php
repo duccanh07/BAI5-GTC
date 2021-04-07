@@ -1,20 +1,20 @@
-<?php 
-    require_once("Helpers/LoginHelper.php");
-
-    if(!$isLogin){
-        
-    }
-
+<?php
+    require_once("Helpers/LoginHelper.php")
 ?>
-
 <ul>
-    <li>
-        <a class="btn btn-success" href="./Views/dangnhap.php">Đăng nhập</a>
-    </li>
-    <li>
-        <a class="btn btn-danger" href="..">Đăng kí</a>
-    </li>
-    <li>
-         <a class="btn btn-info" href="..">Quản lý tài khoản</a>
-    </li>
+    <?php
+if (!$isLogin) {
+    echo " <li>
+            <a href='Views/DangNhap.php' class='btn btn-success'> ĐĂNG NHẬP</a>
+        </li>";
+} else {
+    echo "<li>
+            <a href='...' class='btn btn-danger'> ĐĂNG XUẤT</a>
+        </li>
+        <li>
+            <a href='...' class='btn btn-success'> QUẢN LÝ TÀI KHOẢN</a>
+        </li>";
+}
+   
+    ?>
 </ul>

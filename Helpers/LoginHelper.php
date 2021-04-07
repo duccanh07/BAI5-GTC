@@ -1,4 +1,3 @@
 <?php
-    // session_start();
-    // $isLogin = (isset($_SESSION['taikhoan']) ? true)
-?>
+    session_start();
+    $isLogin =(isset($_SESSION['taikhoan']))?true:false;
