@@ -1,7 +1,13 @@
 <?php
+
+session_start();
 require_once '../db.connect.php';
-require_once '../Models/SanPhamModel.php';
+
 $method=$_GET['action'];
+if(!isset($method)){
+    die ();
+}
+
 switch ($method) {
   case 'dangnhap':
     # code...
@@ -24,8 +30,10 @@ function DangNhap(){
     if($stmt -> execute()){
         $result = $stmt -> get_result();
         if($result ->num_rows > 0){
-            $_SESSION['taikhoan'] =
-        }else{}
+            $_SESSION['taikhoan'] = ten
+        }else{
+            
+        }
     }
      $connection = close();
 }
