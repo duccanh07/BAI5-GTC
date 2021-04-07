@@ -1,6 +1,15 @@
+<?php 
+    require_once("Helpers/LoginHelper.php");
+
+    if(!$isLogin){
+        
+    }
+
+?>
+
 <ul>
     <li>
-        <a class="btn btn-success" href="./views/dangnhap.php">Đăng nhập</a>
+        <a class="btn btn-success" href="./Views/dangnhap.php">Đăng nhập</a>
     </li>
     <li>
         <a class="btn btn-danger" href="..">Đăng kí</a>

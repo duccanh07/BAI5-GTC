@@ -4,20 +4,20 @@ session_start();
 require_once '../db.connect.php';
 
 $method=$_GET['action'];
-if(!isset($method)){
-    die ();
-}
+    if(!isset($method)){
+        die ("khong dang nhap dc");
+    }
 
-switch ($method) {
-  case 'dangnhap':
-    # code...
-    DangNhap();
-    break;
+    switch ($method) {
+    case 'dangnhap':
+        # code...
+        DangNhap();
+        break;
 
-   
-  default:
-    break;
-}
+    
+    default:
+        break;
+    }
 
 function DangNhap(){
     global $connection;
@@ -30,12 +30,13 @@ function DangNhap(){
     if($stmt -> execute()){
         $result = $stmt -> get_result();
         if($result ->num_rows > 0){
-            $_SESSION['taikhoan'] = ten
+            $_SESSION['taikhoan'] = $ten;
+            header("Location: ../index.php");
         }else{
-            
+            header("Location: ../Views/DangNhap.php");
         }
     }
-     $connection = close();
+     $connection -> close();
 }
 
 ?>
